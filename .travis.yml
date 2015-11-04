@@ -5,10 +5,10 @@ before_install:
   - pip install requests
   - python pion_one_execute.py building
 install:
-  
+
 script:
   - python helloworld.py
 after_success:
   - python pion_one_execute.py success
-after_fail:
-  - python pion_one_execute.py fail
+after_failure:
+  - python pion_one_execute.py failure

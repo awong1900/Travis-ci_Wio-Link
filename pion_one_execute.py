@@ -14,7 +14,7 @@ def main(argv):
         requests.post(red_led_off_api,verify=False)
         requests.post(green_led_on_api,verify=False)
         requests.post(orange_led_off_api,verify=False)
-    elif status == "fail":
+    elif status == "failure":
         requests.post(green_led_off_api,verify=False)
         requests.post(red_led_on_api,verify=False)
         requests.post(orange_led_off_api,verify=False)
@@ -22,8 +22,9 @@ def main(argv):
         requests.post(orange_led_on_api,verify=False)
         requests.post(red_led_off_api,verify=False)
         requests.post(green_led_off_api,verify=False)
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print 'Usage: python success/fail/building'
+        print 'Usage: python success/failure/building'
         exit(1)
     main(sys.argv[1])
