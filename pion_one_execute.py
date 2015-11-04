@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# copyright 2015 seeed, wangtengoo7@gmail.com
+
 import sys
 import requests
 
