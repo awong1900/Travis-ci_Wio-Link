@@ -12,17 +12,16 @@ def main(argv):
     status = argv
     if status == "success":
         requests.post(red_led_off_api,verify=False)
-        requests.post(orange_led_off_api,verify=False)
         requests.post(green_led_on_api,verify=False)
+        requests.post(orange_led_off_api,verify=False)
     elif status == "fail":
         requests.post(green_led_off_api,verify=False)
-        requests.post(orange_led_off_api,verify=False)
         requests.post(red_led_on_api,verify=False)
+        requests.post(orange_led_off_api,verify=False)
     elif status == "building":
+        requests.post(orange_led_on_api,verify=False)
         requests.post(red_led_off_api,verify=False)
         requests.post(green_led_off_api,verify=False)
-        requests.post(orange_led_on_api,verify=False)
-
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print 'Usage: python success/fail/building'
