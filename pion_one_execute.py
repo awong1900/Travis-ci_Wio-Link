@@ -19,9 +19,9 @@ def main(argv):
         requests.post(orange_led_off_api,verify=False)
         requests.post(red_led_on_api,verify=False)
     elif status == "building":
+        requests.post(red_led_off_api,verify=False)
         requests.post(green_led_off_api,verify=False)
         requests.post(orange_led_on_api,verify=False)
-        requests.post(red_led_off_api,verify=False)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
