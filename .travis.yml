@@ -11,3 +11,5 @@ notifications:
     - teng.wang@seeed.cc
   webhook:
     - https://maker.ifttt.com/trigger/build_success/with/key/pgefcJnXQwOoRZlUztoX1
+after_success:
+  - ls
