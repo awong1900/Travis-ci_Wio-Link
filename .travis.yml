@@ -2,9 +2,10 @@ language: python
 python:
   - "2.7"
 before_install:
+  - pip install requests
   - python pion_one_execute.py building
 install:
-  - pip install requests
+  
 script:
   - python helloworld.py
 after_success:
