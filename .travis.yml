@@ -6,3 +6,6 @@ install:
 # command to run tests
 script:
   - python helloworld_simpl1e.py
+notifications:
+  email:
+    - teng.wang@seeed.cc
