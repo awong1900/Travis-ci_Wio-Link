@@ -15,7 +15,7 @@
 # under the License.
 
 def main():
-    print "helloword"1
+    print "helloword"
 
 
 if __name__ == "__main__":
