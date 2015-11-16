@@ -13,8 +13,8 @@ orange_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_01/onoff/0?acce
 
 def post_url(url):
     r = requests.post(url)
+    print r.status_code
     if r.status_code != 200:
-        print r.status_code
         requests.post(url)
 
 
