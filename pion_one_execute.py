@@ -12,7 +12,11 @@ orange_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_01/onoff/1?acces
 orange_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_01/onoff/0?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
 
 def post_url(url):
-    requests.post(url)
+    r = requests.post(url)
+    if r.status_code != 200:
+        print r.status_code
+        requests.post(url)
+
 
 def main(argv):
     status = argv
