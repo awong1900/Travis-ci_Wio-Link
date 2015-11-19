@@ -8,12 +8,12 @@
 * 升级Pion One固件，然后拿到三个Relay的Rest API
 * 把pion_one_execute.py放置在根目录，并且修改API常量为你的API
 ```
-    red_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay/onoff/1?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
-    red_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay/onoff/0?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
-    green_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_02/onoff/1?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
-    green_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_02/onoff/0?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
-    orange_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_01/onoff/1?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
-    orange_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelay_01/onoff/0?access_token=14e9888a13b1d9b6c1e7d66ef364d1f6"
+    red_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital0/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
+    red_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital0/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
+    green_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
+    green_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
+    orange_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital1/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
+    orange_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital1/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
 ```
 * 本地测试：  
     * 编译成功 `$python pion_one_execute.py success`
@@ -30,7 +30,7 @@
     install:   
     script:   
       - python helloworld.py    
-    after_success:   
+    after_success:    
       - python pion_one_execute.py success   
     after_failure:   
       - python pion_one_execute.py failure   
