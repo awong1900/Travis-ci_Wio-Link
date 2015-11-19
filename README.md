@@ -29,7 +29,7 @@
       - python pion_one_execute.py building   
     install:   
     script:   
-      - python helloworld.py    
+      - python helloworld.py      
     after_success:    
       - python pion_one_execute.py success   
     after_failure:   
