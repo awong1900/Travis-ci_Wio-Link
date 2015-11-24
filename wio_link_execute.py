@@ -6,10 +6,10 @@ import threading
 
 red_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital0/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
 red_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital0/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
-green_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
-green_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
 orange_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital1/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
 orange_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital1/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
+green_led_on_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/1?access_token=774bdd528b05a2adf734301bfbdf10b0"
+green_led_off_api = "https://cn.iot.seeed.cc/v1/node/GroveRelayDigital2/onoff/0?access_token=774bdd528b05a2adf734301bfbdf10b0"
 
 def post_url(url):
     r = requests.post(url)
@@ -32,6 +32,6 @@ def main(argv):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print 'Usage: python success/failure/building'
+        print 'Usage: python wio_link_execute [success/failure/building]'
         exit(1)
     main(sys.argv[1])
