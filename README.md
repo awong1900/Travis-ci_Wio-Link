@@ -18,7 +18,7 @@
 * 本地测试：  
     * 编译成功 `$python wio_link_execute.py success`
     * 编译失败 `$python wio_link_execute.py failure`
-    * 编译进行中 `$python pion_one_execute.py building`
+    * 编译进行中 `$python wio_link_execute.py building`
 * 修改.travis-ci, 把上述命令嵌入进去 [开始使用travis-ci](http://docs.travis-ci.com/user/for-beginners/)
 ```yml
     language: python
