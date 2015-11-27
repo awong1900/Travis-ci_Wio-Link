@@ -26,14 +26,14 @@
       - "2.7"   
     before_install:   
       - pip install requests   
-      - python pion_one_execute.py building   
+      - python wio_link_execute.py building   
     install:   
     script:   
       - python helloworld.py      
     after_success:    
-      - python pion_one_execute.py success   
+      - python wio_link_execute.py success   
     after_failure:   
-      - python pion_one_execute.py failure   
+      - python wio_link_execute.py failure   
 ```
 * 假设helloworld.py是你的项目。修改它故意设置一个错误，然后提交。一起见证奇迹吧！
 
